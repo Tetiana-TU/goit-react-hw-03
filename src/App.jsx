@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Formik, Form, Field } from "formik";
+// import { Formik, Form, Field } from "formik";
 import "./App.css";
 import ContactList from "./components/ContactList/ContactList";
 import initialContacts from "./contacts.json";
@@ -13,10 +13,11 @@ const App = () => {
   const visibleContacts = contacts.filter((contact) =>
     contact.name.toLowerCase().includes(filter.toLowerCase())
   );
+  
   return (
     <div className="App">
       <h1>Phonebook</h1>
-      {/* <ContactForm /> */}
+      <ContactForm addContact={(newContact) => setContacts([...contacts, newContact])} />
       <SearchBox value={filter} onFilter={setFilter} />
       <ContactList contacts={visibleContacts} />
     </div>
