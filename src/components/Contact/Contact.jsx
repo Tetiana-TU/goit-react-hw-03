@@ -6,11 +6,11 @@ const Contact = ({ contact, onDelete }) => {
   return (
     <div className={css.container}>
       <div className={css.contactcontainer}>
-        <div className={css.icon}>
+        <div className={css.conticon}>
           <FaUser className={css.icon} />
           <p>{contact.name}</p>
         </div>
-        <div className={css.icon}>
+        <div className={css.conticon}>
           <FaPhone className={css.icon} />
           <p>{contact.number}</p>
         </div>

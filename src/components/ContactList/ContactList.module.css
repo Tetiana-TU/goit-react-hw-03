@@ -5,7 +5,10 @@
   flex-direction: column;
   gap: 16px;
 }
-
+.list {
+  display: flex;
+  flex-wrap: wrap;
+}
 .item {
   max-width: 600px;
   list-style: none;

@@ -39,14 +39,16 @@ const ContactForm = ({ addContact }) => {
       validationSchema={FeedbackSchema}
     >
       <Form className={css.form}>
-        <label htmlFor="name">Name</label>
-        <Field className={css.field} type="text" id="name" name="name" />
-        <ErrorMessage name="name" component="span" className={css.error} />
-
-        <label htmlFor="number">Number</label>
-        <Field className={css.field} type="text" id="number" name="number" />
-        <ErrorMessage name="number" component="span" className={css.error} />
-
+        <div className={css.continput}>
+          <label htmlFor="name">Name</label>
+          <Field className={css.field} type="text" id="name" name="name" />
+          <ErrorMessage name="name" component="span" className={css.error} />
+        </div>
+        <div className={css.continput}>
+          <label htmlFor="number">Number</label>
+          <Field className={css.field} type="text" id="number" name="number" />
+          <ErrorMessage name="number" component="span" className={css.error} />
+        </div>
         <button className={css.btn} type="submit">
           Add contact
         </button>
